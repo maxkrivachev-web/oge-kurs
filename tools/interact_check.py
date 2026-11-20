@@ -73,6 +73,8 @@ async def main():
         await pg.evaluate("location.hash='trainer'"); await pg.wait_for_timeout(300)
         await pg.click('#trM button[data-m="bad"]'); await pg.wait_for_timeout(200)
         out['tr_bad_all']=await pg.evaluate("document.querySelectorAll('#trList .trc').length")
+        await pg.evaluate("location.hash='m12'"); await pg.wait_for_timeout(300)
+        out['var_self']=await pg.evaluate("""(()=>{const b=document.querySelector('.vself[data-v="p2"]');const i=b.querySelector('.vrow[data-n="14"] input');i.value='13212';i.dispatchEvent(new Event('input',{bubbles:true}));b.querySelector('.vchk').click();return [document.querySelectorAll('.vself').length, b.querySelector('.vrow[data-n="14"] .vres').className]})()""")
         out['errors']=errs
         print(json.dumps(out,ensure_ascii=False,indent=1))
         await b.close()

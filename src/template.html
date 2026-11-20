@@ -282,6 +282,16 @@ textarea.code{width:100%;min-height:96px;font:14px/1.45 ui-monospace,Menlo,Conso
 .fb.no{border-left-color:var(--warn);background:var(--warnbg)}
 .fb>:last-child{margin-bottom:0}
 .fb .src{font-size:14px;color:var(--mute)}
+.vself{margin:16px 0 32px;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--soft)}
+.vself h3{margin-top:0}
+.vgrid{display:grid;gap:8px}
+.vrow{display:grid;grid-template-columns:32px minmax(0,1fr);gap:4px 8px;align-items:center}
+.vrow input{min-height:44px;padding:8px 12px;max-width:220px}
+.vrow .grade{margin:0}
+.vres{grid-column:2;display:flex;align-items:center;gap:6px;font-size:15px}
+.vres:empty{display:none}
+.vres svg{width:18px;height:18px;flex:none}
+.vres.ok{color:var(--ok)}.vres.no{color:var(--warn)}
 .grade{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}
 .grade button{min-width:48px;min-height:44px;border:1px solid var(--line2);border-radius:8px;background:var(--surface);font-weight:700;cursor:pointer}
 .grade button[aria-pressed=true]{background:var(--blue);border-color:var(--blue);color:#fff}
